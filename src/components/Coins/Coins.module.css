@@ -1,0 +1,90 @@
+.coins {
+  background: url("../../assets/img/coins_bg.png") no-repeat center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.coins h2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #005bbc;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.coins h5 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.coins_main {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.coin {
+  flex-basis: 10%;
+  margin: 10px 0;
+}
+
+.coins_main img {
+  width: 90px;
+  margin: 0 auto;
+}
+
+.coins_farm {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.coins_block {
+  background: #f4f7fd;
+  box-shadow: -4px 8px 11px rgba(0, 0, 0, 0.43), inset 0px 5px 5px #ffffff;
+  border-radius: 18px;
+  padding: 30px 20px;
+  margin-top: 20px;
+}
+
+.block_coins {
+  display: flex;
+}
+
+.block_coins img {
+  max-width: 90px;
+  margin: 25px 25px 0;
+}
+
+.coins_block h4 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #005bbc;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coins_block h4 img {
+  max-width: 54px;
+  margin-right: 5px;
+}
+
+.coins_block:nth-child(2) h4 {
+  color: #fcc413;
+}

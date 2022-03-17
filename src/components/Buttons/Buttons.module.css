@@ -1,0 +1,119 @@
+.blue_btn {
+  border: none;
+  outline: none;
+  position: relative;
+  background: transparent;
+}
+
+.blue_btn span {
+  background: rgba(0, 34, 156, 100%);
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.blue_btn.blue_white_btn span {
+  background: #fff;
+  color: rgba(0, 34, 156, 100%);
+}
+
+.blue_btn:hover span {
+  background: rgba(0, 34, 156, 0);
+  color: #0022a7;
+  transition: 0.3s;
+}
+
+.blue_btn::before {
+  content: "";
+  position: absolute;
+  background: #c4d2ff;
+  border-radius: 6px;
+  width: 80%;
+  height: 100%;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.blue_btn:hover::before {
+  width: 98%;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.blue_btn::after {
+  content: "";
+  position: absolute;
+  border-radius: 6px;
+  width: calc(100% + 4px);
+  height: 100%;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border: 1px #3a6bff dashed;
+  background: transparent;
+}
+
+.white_btn {
+  outline: 1px solid #005bbc;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.white_btn > span {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #005bbc;
+  position: relative;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.white_btn:hover > span {
+  transition: 0.3s;
+  color: #ffffff;
+}
+
+.white_btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0022a7;
+  left: -100%;
+  transition: 0.4s;
+}
+
+.white_btn:hover:before {
+  left: 0;
+  top: 0;
+  transition: 0.4s;
+}

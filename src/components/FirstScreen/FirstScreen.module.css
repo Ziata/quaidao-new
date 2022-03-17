@@ -1,0 +1,123 @@
+.main_screen {
+  width: 100%;
+  background: url("../../assets/img/main_screen_bg.png") no-repeat center;
+  background-size: cover;
+  max-height: 900px;
+  height: 100vh;
+  position: relative;
+  padding-top: 100px;
+}
+
+.svg_wrapper {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.svg_wrapper svg {
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+.main_screen_info_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 800px;
+  height: calc(100vh - 100px);
+  position: absolute;
+}
+
+.main_screen_titles {
+  z-index: 3;
+  position: relative;
+  margin-top: 100px;
+}
+
+.main_screen_titles img {
+  margin-bottom: 30px;
+}
+
+.main_screen_titles h4 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 45px;
+  color: #f4f7fd;
+}
+
+.main_screen_titles h4 span {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 45px;
+  color: #f4f7fd;
+}
+
+.main_screen_info {
+  display: flex;
+  align-items: center;
+}
+
+.main_screen_info > div {
+  margin-right: 50px;
+}
+
+.main_screen_info h5 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.main_screen_info h5 span {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #ffffff;
+}
+
+.main_screen_info {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1419.98px) {
+  .main_screen_titles {
+    margin-top: 70px;
+  }
+  .main_screen_info h5 {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .main_screen_info div {
+    margin-right: 15px;
+  }
+  .main_screen_info h5 {
+    font-size: 18px;
+  }
+  .main_screen_info h5 span {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1050.98px) {
+  .main_screen {
+    max-height: 800px;
+  }
+  .main_screen_info_left {
+    max-height: 700px;
+    height: calc(100vh - 100px);
+  }
+}

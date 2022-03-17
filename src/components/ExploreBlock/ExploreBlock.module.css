@@ -1,0 +1,88 @@
+.explore {
+  padding: 100px 0;
+  background: #f4f7fd;
+  background-image: url("../../assets/img/explore_bg.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.explore h2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  text-align: center;
+  color: #005bbc;
+  margin: 20px 0 60px;
+}
+
+.explore_main {
+  display: flex;
+  padding: 50px;
+  justify-content: space-between;
+}
+
+.explore_block {
+  background: #f4f7fd;
+  box-shadow: -4px 8px 11px rgba(0, 0, 0, 0.43), inset 0px 5px 5px #ffffff;
+  border-radius: 6px;
+  max-width: 370px;
+  position: relative;
+  z-index: 2;
+}
+
+.explore_block_wrapper {
+  position: relative;
+}
+
+.explore_block_wrapper::before {
+  content: "";
+  position: absolute;
+  background: #c4d2ff;
+  border-radius: 6px;
+  width: 80%;
+  height: 100%;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.explore_block_title {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(0, 34, 167, 0.26);
+}
+
+.explore_block_main {
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.explore_block_main > span {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+  display: block;
+  margin: 20px 0;
+}
+
+@media (max-width: 1279.98px) {
+  .explore_main {
+    padding: 50px 0;
+  }
+  .explore_block {
+    width: 310px;
+  }
+}

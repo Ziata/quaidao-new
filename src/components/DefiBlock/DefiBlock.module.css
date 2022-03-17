@@ -1,0 +1,13 @@
+.defi {
+  background: url("../../assets/img/defi_bg.png") no-repeat center;
+  background-size: cover;
+  padding: 70px 0;
+}
+
+.title {
+  margin: 0 auto;
+}
+
+.defi_main svg {
+  max-width: 100%;
+}

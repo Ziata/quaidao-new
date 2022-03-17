@@ -1,0 +1,79 @@
+.team {
+  margin: 70px 0;
+}
+
+.team h2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #005bbc;
+  text-align: center;
+}
+
+.team_main {
+  margin-top: 40px;
+}
+
+.slide {
+  height: 390px;
+  max-width: 212px;
+  display: block !important;
+  margin: 5px auto;
+}
+
+.slide .img {
+  position: relative;
+  width: 212px;
+  height: 264px;
+  outline: 3px solid #005bbc;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.slide .img a {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: auto;
+}
+
+.slide .img img {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: 0.2s;
+}
+
+.slide .img:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  transition: 0.2s;
+}
+
+.slide h6 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #0b0b0b;
+  text-align: center;
+  margin: 15px 0 5px;
+}
+
+.slide span {
+  font-family: "Open Sans";
+  font-style: normal;
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #0b0b0b;
+  text-align: center;
+}
