@@ -1,6 +1,8 @@
 import styles from "./FirstScreen.module.css";
 import { MainImg } from "./MainImg";
 import title from "../../assets/svgs/title.svg";
+import { MainImgMobile } from "./MainImgMobile";
+import { ButtonBlueWhite } from "../Buttons/Buttons";
 
 export const FirstScreen = (props) => {
   return (
@@ -8,6 +10,12 @@ export const FirstScreen = (props) => {
       <div className='container'>
         <div className={styles.main_screen_info_left}>
           <div className={styles.main_screen_titles}>
+            <div className={styles.mobile_btn}>
+              <ButtonBlueWhite
+                text='Litepaper'
+                style={{ width: "220px", margin: "20px auto 50px" }}
+              />
+            </div>
             <img src={title} />
             <h4>
               <span>DEFI</span> ACCELERATOR <br /> AND GOVERNANCE
@@ -41,6 +49,9 @@ export const FirstScreen = (props) => {
         <div className={styles.svg_wrapper}>
           <MainImg setWidthSvg={props.setWidthSvg} />
         </div>
+      </div>
+      <div className={styles.svg_wrapper_mobile}>
+        <MainImgMobile />
       </div>
     </div>
   );

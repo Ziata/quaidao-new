@@ -11,3 +11,61 @@
 .defi_main svg {
   max-width: 100%;
 }
+
+.defi_main_mobile {
+  display: none;
+}
+.defi_main {
+  margin: -100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1279.98px) {
+  .defi_main {
+    margin: -100px 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .defi_main {
+    margin: -120px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .defi_main {
+    display: none;
+  }
+
+  .defi_main_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 477.98px) {
+  .defi_main_mobile {
+    margin: -40px 0;
+  }
+}
+
+@media (max-width: 399.98px) {
+  .defi_main_mobile {
+    margin: -70px 0;
+  }
+}
+
+@media (max-width: 375.98px) {
+  .defi_main_mobile {
+    margin: -90px 0;
+  }
+}
+
+@media (max-width: 350.98px) {
+  .defi_main_mobile {
+    margin: -115px 0;
+  }
+}

@@ -19,3 +19,9 @@
   right: 50%;
   transform: translateX(200%);
 }
+
+@media (max-width: 477.98px) {
+  .arrow {
+    width: 37px;
+  }
+}

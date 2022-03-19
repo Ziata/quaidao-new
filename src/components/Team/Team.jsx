@@ -59,8 +59,22 @@ export const Team = () => {
     slidesToScroll: 1,
     rows: 2,
     arrows: true,
-    nextArrow: <ArrowRight />,
-    prevArrow: <ArrowLeft />,
+    nextArrow: <ArrowRight stylesProps={{ bottom: "-40px" }} />,
+    prevArrow: <ArrowLeft stylesProps={{ bottom: "-40px" }} />,
+    responsive: [
+      {
+        breakpoint: 991.98,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768.98,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
 
   return (

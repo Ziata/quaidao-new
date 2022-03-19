@@ -73,9 +73,29 @@
 
 @media (max-width: 1279.98px) {
   .comming_soon_block {
-    max-width: 310px;
+    max-width: 295px;
   }
   .comming_soon_main {
     padding: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .comming_soon_main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .comming_soon_block {
+    margin-bottom: 50px;
+  }
+  .comming_soon {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 477.98px) {
+  .comming_soon h2 {
+    font-size: 34px;
+    line-height: 42px;
   }
 }

@@ -7,6 +7,7 @@ import "./App.css";
 import Main from "./pages/Main";
 import Footer from "./components/Footer/Footer";
 import { Menu } from "./components/Menu/Menu";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Menu />
       <Routes>
         <Route path='/' exact element={<Main />} />
+        <Route path='/projects' exact element={<Projects />} />
       </Routes>
       <Footer />
     </BrowserRouter>

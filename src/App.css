@@ -78,15 +78,14 @@ select {
 } */
 
 .container {
-  max-width: 1730px;
-  margin: 0 auto;
+  padding: 0 15px;
 }
 
 @media (min-width: 477.98px) {
   .container {
-    max-width: 540px;
+    max-width: 100%;
     margin: auto;
-    padding: 0;
+    padding: 0 15px;
   }
 }
 

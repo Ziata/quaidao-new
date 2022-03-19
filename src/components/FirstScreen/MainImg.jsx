@@ -3,6 +3,7 @@ import quai from "../../assets/img/quai.png";
 import eye from "../../assets/img/eye.png";
 import comics from "../../assets/img/comics.png";
 import { useEffect, useRef } from "react";
+import styles from "./FirstScreen.module.css";
 
 export const MainImg = (props) => {
   const elementRef = useRef();
@@ -108,34 +109,7 @@ export const MainImg = (props) => {
         height='77'>
         <rect x='751' y='769' width='72' height='76' fill='#C4C4C4' />
       </mask>
-      <image
-        x='729'
-        y='167'
-        width='112px'
-        height='112px'
-        href={rasko}
-        xlinkHref={rasko}></image>
-      <image
-        x='912'
-        y='572'
-        width='112px'
-        height='112px'
-        href={eye}
-        xlinkHref={eye}></image>
-      <image
-        x='912'
-        y='315'
-        width='112px'
-        height='112px'
-        href={quai}
-        xlinkHref={quai}></image>
-      <image
-        x='729'
-        y='755'
-        width='112px'
-        height='112px'
-        href={comics}
-        xlinkHref={comics}></image>
+
       {/* <g filter="url(#filter7_di_1001_1537)">
         <circle
           cx="787"
@@ -165,6 +139,17 @@ export const MainImg = (props) => {
         <rect x='730' y='188' width='115' height='102' fill='url(#pattern3)' />
       </g>
       <defs>
+        <filter id='f1' x='0' y='0' width='200%' height='200%'>
+          <feOffset result='offOut' in='SourceGraphic' dx='10' dy='10' />
+          <feColorMatrix
+            result='matrixOut'
+            in='offOut'
+            type='matrix'
+            values='0.2 0 0 1 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0'
+          />
+          <feGaussianBlur result='blurOut' in='matrixOut' stdDeviation='10' />
+          <feBlend in='SourceGraphic' in2='blurOut' mode='normal' />
+        </filter>
         <filter
           id='filter0_d_1001_1537'
           x='54'
@@ -803,6 +788,38 @@ export const MainImg = (props) => {
           <stop offset='0.993948' stop-color='#FDA4FF' />
         </linearGradient>
       </defs>
+      <image
+        x='729'
+        y='167'
+        className={styles.image_circle}
+        width='112px'
+        height='112px'
+        href={rasko}
+        xlinkHref={rasko}></image>
+      <image
+        x='912'
+        y='572'
+        className={styles.image_circle}
+        width='112px'
+        height='112px'
+        href={eye}
+        xlinkHref={eye}></image>
+      <image
+        x='912'
+        y='315'
+        className={styles.image_circle}
+        width='112px'
+        height='112px'
+        href={quai}
+        xlinkHref={quai}></image>
+      <image
+        x='729'
+        y='755'
+        className={styles.image_circle}
+        width='112px'
+        height='112px'
+        href={comics}
+        xlinkHref={comics}></image>
     </svg>
   );
 };

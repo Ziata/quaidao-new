@@ -2,6 +2,7 @@ import styles from "./DefiBlock.module.css";
 import title from "../../assets/svgs/title_defi.svg";
 import { DefiImg } from "./DefiImg";
 import { ButtonBlue, ButtonBlueWhite, ButtonWhite } from "../Buttons/Buttons";
+import { DefiImgMobile } from "./DefiImgMobile";
 
 export const DefiBlock = () => {
   return (
@@ -10,6 +11,9 @@ export const DefiBlock = () => {
         <img src={title} className={styles.title} />
         <div className={styles.defi_main}>
           <DefiImg />
+        </div>
+        <div className={styles.defi_main_mobile}>
+          <DefiImgMobile />
         </div>
         <ButtonBlueWhite
           text='Explore'

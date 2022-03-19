@@ -1,0 +1,144 @@
+.projects_block {
+  background: #f4f7fd;
+}
+
+.projects_block.projects_block_even {
+  background: #fff;
+}
+
+.projects_block_main {
+  display: flex;
+  padding: 80px 0 50px;
+}
+
+.projects_block.projects_block_even .projects_block_main {
+  flex-direction: row-reverse;
+}
+
+.projects_block_right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.projects_block_left {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects_block_left img {
+  border-radius: 18px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  box-shadow: -4px 8px 10px 0px rgba(0, 0, 0, 0.51);
+}
+
+.projects_block_left span {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.projects_block_left span::after {
+  content: "";
+  border: 1px solid #005bbc;
+  border-radius: 18px;
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.projects_block_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+.projects_block.projects_block_even .projects_block_main .projects_block_right {
+  padding-right: 60px;
+  padding-left: 0;
+}
+
+.projects_block_right h4 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+.projects_block_right p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+  margin: 20px 0;
+}
+
+@media (max-width: 1279.98px) {
+  .projects_block_right {
+    width: 50%;
+    padding-left: 40px;
+  }
+
+  .projects_block_left {
+    width: 50%;
+  }
+  .projects_block.projects_block_even
+    .projects_block_main
+    .projects_block_right {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .projects_block_main,
+  .projects_block.projects_block_even .projects_block_main {
+    display: flex;
+    flex-direction: column;
+  }
+  .projects_block_right {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 40px;
+  }
+
+  .projects_block_left {
+    width: 100%;
+  }
+  .projects_block.projects_block_even
+    .projects_block_main
+    .projects_block_right {
+    padding-right: 0;
+  }
+  .projects_block_left img,
+  .projects_block_left img {
+    max-width: 98%;
+    margin: 0 auto;
+  }
+}
+
+.projects_block_left span::after {
+  top: -10px;
+  left: -10px;
+}
+
+@media (max-width: 768.98px) {
+  .projects_block_main {
+    display: flex;
+    padding: 50px 0 30px;
+  }
+}

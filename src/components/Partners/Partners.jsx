@@ -62,6 +62,12 @@ export const Partners = () => {
           slidesToShow: 3,
         },
       },
+      {
+        breakpoint: 991.98,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
     ],
   };
 

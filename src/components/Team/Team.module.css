@@ -77,3 +77,33 @@
   color: #0b0b0b;
   text-align: center;
 }
+
+@media (max-width: 477.98px) {
+  .slide {
+    height: 340px;
+    max-width: 170px;
+  }
+
+  .slide .img {
+    position: relative;
+    width: 170px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 399.98px) {
+  .slide {
+    height: 300px;
+    max-width: 135px;
+  }
+
+  .slide .img {
+    position: relative;
+    width: 135px;
+    height: 170px;
+  }
+  .slide h6 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
