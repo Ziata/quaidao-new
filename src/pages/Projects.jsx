@@ -20,7 +20,7 @@ const projects = [
         </p>
       </>
     ),
-    link: "",
+    link: "https://asko.finance/rasko",
   },
   {
     title: "QUAI Invest",
@@ -39,7 +39,7 @@ const projects = [
         </p>
       </>
     ),
-    link: "",
+    link: "https://quai-invest.net/",
   },
   {
     title: "MeDIA eYe NFT Portal",
@@ -58,7 +58,7 @@ const projects = [
         </p>
       </>
     ),
-    link: "",
+    link: "https://mediaeyenft.com/",
   },
   {
     title: "Metaverse Comics",

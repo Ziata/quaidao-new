@@ -44,6 +44,30 @@
   display: none;
 }
 
+.logo {
+  transform-origin: 53% 50%;
+  -webkit-animation: rot 1s linear 0.5s;
+  animation: rot 1s linear 0.5s;
+}
+
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 1419.98px) {
   .info_right {
     width: 425px;

@@ -3,13 +3,24 @@ import title from "../../assets/svgs/title_info.svg";
 import info_logo from "../../assets/svgs/info_logo.svg";
 import { ButtonBlue } from "../Buttons/Buttons";
 import { MainScreenInfoImg } from "./MainScreenInfoImg";
+import { useIsVisible } from "react-is-visible";
+import { useRef } from "react";
+import { Animated } from "react-animated-css";
 
 export const MainScreenInfo = (props) => {
+  const isVisibleRef = useRef();
+  const isVisible = useIsVisible(isVisibleRef);
   return (
     <div className={styles.info}>
       <div className='container'>
-        <div className={styles.info_main}>
-          <img className={styles.title} src={title} />
+        <div className={styles.info_main} ref={isVisibleRef}>
+          <Animated
+            animationIn='fadeInUp'
+            animationInDuration={1000}
+            animationInDelay={500}
+            isVisible={isVisible}>
+            <img className={styles.title} src={title} />
+          </Animated>
           <div className={styles.info_text}>
             <img className={styles.info_logo} src={info_logo} />
             <p>

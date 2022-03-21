@@ -4,9 +4,14 @@ import eye from "../../assets/img/eye.png";
 import comics from "../../assets/img/comics.png";
 import { useEffect, useRef } from "react";
 import styles from "./FirstScreen.module.css";
+import { useIsVisible } from "react-is-visible";
+import { createBrowserHistory } from "history";
 
 export const MainImg = (props) => {
+  const isVisibleRef = useRef();
+  const isVisible = useIsVisible(isVisibleRef);
   const elementRef = useRef();
+  const history = createBrowserHistory();
 
   useEffect(() => {
     const divElement = elementRef.current;
@@ -15,7 +20,11 @@ export const MainImg = (props) => {
   }, [props]);
 
   return (
-    <svg viewBox='0 0 1135 900' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg
+      viewBox='0 0 1135 900'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      ref={isVisibleRef}>
       <path
         ref={elementRef}
         fill-rule='evenodd'
@@ -42,7 +51,15 @@ export const MainImg = (props) => {
       <g filter='url(#filter1_d_1001_1537)'>
         <circle cx='51' cy='276' r='16' fill='#5A70FF' />
       </g>
-      <circle cx='51' cy='276' r='9' fill='white' />
+      <circle cx='51' cy='276' r='9' fill='white'>
+        <animate
+          attributeName='r'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='5;9;5;'
+          dur='3s'
+        />
+      </circle>
       <line
         x1='677.628'
         y1='438.971'
@@ -92,6 +109,7 @@ export const MainImg = (props) => {
       <path
         d='M701.696 592.02H637C594.399 592.02 560 557.489 560 515.02C560 493.719 568.6 474.535 582.624 460.511C596.515 446.619 615.699 438.02 637 438.02C658.301 438.02 677.617 446.619 691.376 460.511C698.388 467.523 703.945 475.858 707.914 485.119C711.883 494.248 714 504.435 714 515.152C714 532.087 708.576 547.698 699.182 560.399C697.198 563.31 694.816 565.956 692.302 568.47L670.076 545.978C677.749 537.908 682.38 527.059 682.38 515.02C682.38 502.451 677.352 491.205 669.149 483.002C660.947 474.8 649.436 469.772 637 469.772C624.564 469.772 613.186 474.8 604.983 483.002C596.78 491.205 591.753 502.451 591.753 515.02C591.753 540.025 611.995 560.267 637 560.267V527.456L701.696 592.02Z'
         fill='url(#paint0_linear_1001_1537)'
+        className={isVisible ? styles.logo : null}
       />
       <circle cx='968' cy='369' r='71' stroke='#005BBC' stroke-width='3' />
       <circle cx='787' cy='807' r='71' stroke='#005BBC' stroke-width='3'>
@@ -791,31 +809,40 @@ export const MainImg = (props) => {
       <image
         x='729'
         y='167'
-        className={styles.image_circle}
+        className={styles.image_circle + " " + styles.image_circle_1}
         width='112px'
         height='112px'
         href={rasko}
-        xlinkHref={rasko}></image>
+        xlinkHref={rasko}
+        onClick={() => {
+          history.push("https://asko.finance/");
+        }}></image>
       <image
         x='912'
         y='572'
-        className={styles.image_circle}
+        className={styles.image_circle + " " + styles.image_circle_2}
         width='112px'
         height='112px'
         href={eye}
-        xlinkHref={eye}></image>
+        xlinkHref={eye}
+        onClick={() => {
+          history.push("https://mediaeyenft.com/");
+        }}></image>
       <image
         x='912'
         y='315'
-        className={styles.image_circle}
+        className={styles.image_circle + " " + styles.image_circle_3}
         width='112px'
         height='112px'
         href={quai}
-        xlinkHref={quai}></image>
+        xlinkHref={quai}
+        onClick={() => {
+          history.push("https://quai-invest.net/");
+        }}></image>
       <image
         x='729'
         y='755'
-        className={styles.image_circle}
+        className={styles.image_circle + " " + styles.image_circle_4}
         width='112px'
         height='112px'
         href={comics}

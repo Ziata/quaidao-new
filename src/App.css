@@ -34,6 +34,8 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background: #fff;
+  overflow-x: hidden;
 }
 
 a {
@@ -92,24 +94,28 @@ select {
 @media (min-width: 767.98px) {
   .container {
     max-width: 720px;
+    padding: 0;
   }
 }
 
 @media (min-width: 991.98px) {
   .container {
     max-width: 960px;
+    padding: 0;
   }
 }
 
 @media (min-width: 1279.98px) {
   .container {
     max-width: 1240px;
+    padding: 0;
   }
 }
 
 @media (min-width: 1439.98px) {
   .container {
     max-width: 1360px;
+    padding: 0;
   }
 }
 
@@ -117,6 +123,6 @@ select {
   .container {
     max-width: 1730px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0;
   }
 }

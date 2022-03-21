@@ -1,7 +1,7 @@
-.projects_header {
+.tokenomics_header {
   height: 100px;
   width: 100%;
-  /* background: url("../../../assets/img/projects_header.png") no-repeat center;
+  /*   background: url("../../../assets/img/projects_header.png") no-repeat center;
   background-size: cover; */
   background: linear-gradient(
     321.6deg,
@@ -14,28 +14,9 @@
   position: relative;
 }
 
-.projects_header_title {
-  height: 130px;
-  width: 100%;
-  background: #f4f7fd;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.projects_header_title h2 {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 57px;
-  color: #005bbc;
-  text-align: center;
-}
-
 @media (max-width: 991.98px) {
-  .projects_header {
-    /*  background: url("../../../assets/img/projects_header_mobile.png") no-repeat
+  .tokenomics_header {
+    /* background: url("../../../assets/img/projects_header_mobile.png") no-repeat
       center;
     background-size: cover; */
     background: linear-gradient(
@@ -45,11 +26,6 @@
     );
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
-  }
-  .projects_header_title {
-    height: 90px;
-  }
-  .projects_header {
     height: 60px;
   }
 }

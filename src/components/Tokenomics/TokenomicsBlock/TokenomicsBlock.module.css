@@ -1,0 +1,226 @@
+.tokenomics_blocks {
+  padding: 50px 0;
+  background: #fff;
+  background: url("../../../assets/img/tokenomics_bg.png") no-repeat center;
+  background-size: contain;
+}
+
+.tokenomics_blocks h2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #005bbc;
+  text-align: center;
+}
+
+.tokenomics_blocks_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.tokenomics_block_wrapper {
+  position: relative;
+  width: 340px;
+  margin: 30px;
+}
+
+.tokenomics_block_wrapper::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 20px);
+  height: 100%;
+  border: 1px dashed #3a6bff;
+  top: -10px;
+  left: -10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.tokenomics_block_wrapper::after {
+  content: "";
+  position: absolute;
+  background: #c4d2ff;
+  width: 80%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  border-radius: 6px;
+}
+
+.tokenomics_block {
+  position: relative;
+  background: #f4f7fd;
+  box-shadow: -4px 8px 11px rgba(0, 0, 0, 0.43), inset 0px 5px 5px #ffffff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  z-index: 2;
+}
+
+.tokenomics_block h5 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 58px;
+  color: #000000;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.tokenomics_block h5 span {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #0075ff;
+}
+
+.tokenomics_block_wrapper:first-child img {
+  -webkit-animation: rocket-move 2s ease infinite;
+  animation: rocket-move 2s ease infinite;
+}
+
+.tokenomics_block_wrapper:nth-child(2) img {
+  -webkit-animation: rotate 2s ease infinite;
+  animation: rotate 2s ease infinite;
+}
+
+.tokenomics_block_wrapper:nth-child(3) img {
+  -webkit-animation: rotate 12s linear infinite;
+  animation: rotate 12s linear infinite;
+}
+
+.tokenomics_block_wrapper:nth-child(4) img {
+  -webkit-animation: rotate 12s linear infinite;
+  animation: rotate 12s linear infinite;
+}
+
+.tokenomics_block_wrapper:nth-child(5) img {
+  -webkit-animation: rotate-2 14s ease infinite;
+  animation: rotate-2 14s ease infinite;
+}
+
+@-webkit-keyframes rocket-move {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes rocket-move {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  28.5% {
+    transform: rotate(0);
+  }
+  33.5% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  61.5% {
+    transform: rotate(180deg);
+  }
+  66.5% {
+    transform: rotate(360deg);
+  }
+  95% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes rotate-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  31% {
+    transform: rotate(0);
+  }
+  33.5% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  64.5% {
+    transform: rotate(180deg);
+  }
+  66.5% {
+    transform: rotate(360deg);
+  }
+  99% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@media (max-width: 1279.98px) {
+  .tokenomics_block_wrapper {
+    position: relative;
+    width: 280px;
+    margin: 20px;
+  }
+
+  .tokenomics_block {
+    padding: 20px 10px;
+  }
+  .tokenomics_block h5 {
+    font-size: 20px;
+    line-height: 58px;
+  }
+  .tokenomics_block h5 span {
+    font-size: 38px;
+  }
+}

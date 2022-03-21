@@ -5,10 +5,24 @@ import big_logo from "../../assets/svgs/roadmap_big_logo.svg";
 import q1 from "../../assets/img/roadmap/q1.png";
 import q2 from "../../assets/img/roadmap/q2.png";
 import q3 from "../../assets/img/roadmap/q3.png";
+import { useIsVisible } from "react-is-visible";
+import { useRef } from "react";
+import { Animated } from "react-animated-css";
+import { Parallax } from "react-parallax";
 
 export const Roadmap = () => {
+  const isVisibleRef = useRef();
+  const isVisible = useIsVisible(isVisibleRef);
+  const isVisibleRef_2 = useRef();
+  const isVisible_2 = useIsVisible(isVisibleRef_2);
+  const isVisibleRef_3 = useRef();
+  const isVisible_3 = useIsVisible(isVisibleRef_3);
   return (
-    <div className={styles.roadmap}>
+    <Parallax
+      blur={0}
+      bgImage='img/roadmap_bg.png'
+      strength={600}
+      contentClassName={styles.roadmap}>
       <div className='container'>
         <img src={title} className={styles.title} />
         <h3>
@@ -16,60 +30,81 @@ export const Roadmap = () => {
           <br />
           <span>(Q4 activities will be added during Q2)</span>
         </h3>
-        <div className={styles.roadmap_first_row}>
-          <div className={styles.roadmap_column}>
-            <div className={styles.roadmap_column_top}>
-              <div className={styles.roadmap_number}>
-                <img src={q1} />
+        <div className={styles.roadmap_first_row} ref={isVisibleRef}>
+          <Animated
+            animationIn='fadeInLeft'
+            animationInDuration={1000}
+            animationInDelay={300}
+            isVisible={isVisible}>
+            <div className={styles.roadmap_column}>
+              <div className={styles.roadmap_column_top}>
+                <div className={styles.roadmap_number}>
+                  <img src={q1} />
+                </div>
+                <div className={styles.roadmap_title}>
+                  <h4>2022</h4>
+                  <h5>March - April</h5>
+                </div>
               </div>
-              <div className={styles.roadmap_title}>
-                <h4>2022</h4>
-                <h5>March - April</h5>
+              <div className={styles.roadmap_main}>
+                <ul>
+                  <li>Complete all back end database work</li>
+                  <li>
+                    Finalize testing of QUANT Invest and LP token farming Zapper
+                    Style Contracts BSC and ETH
+                  </li>
+                  <li>
+                    Updates to User Interface (target date: 2nd week of March)
+                  </li>
+                  <li>Final testing of the entire platform and UI</li>
+                  <li>Set fee distribution to cohort farming</li>
+                  <li>
+                    DeFi Gateway final testing for ETH and BSC (target date: 3rd
+                    week of March)
+                  </li>
+                  <li>Initiate marketing campaign</li>
+                </ul>
+                <h6>Beta launch (target date:24 - 28th of March)* </h6>
+                <ul>
+                  <li>
+                    QUAI DAO site update release (target date: 3rd week of
+                    March)
+                  </li>
+                  <li>
+                    QUAI DAO Kick off of the DAO Dev work/Colony Type
+                    Multi-Chain DAO (target date for launch: Q4 2022)
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className={styles.roadmap_main}>
-              <ul>
-                <li>Complete all back end database work</li>
-                <li>
-                  Finalize testing of QUANT Invest and LP token farming Zapper
-                  Style Contracts BSC and ETH
-                </li>
-                <li>
-                  Updates to User Interface (target date: 2nd week of March)
-                </li>
-                <li>Final testing of the entire platform and UI</li>
-                <li>Set fee distribution to cohort farming</li>
-                <li>
-                  DeFi Gateway final testing for ETH and BSC (target date: 3rd
-                  week of March)
-                </li>
-                <li>Initiate marketing campaign</li>
-              </ul>
-              <h6>Beta launch (target date:24 - 28th of March)* </h6>
-              <ul>
-                <li>
-                  QUAI DAO site update release (target date: 3rd week of March)
-                </li>
-                <li>
-                  QUAI DAO Kick off of the DAO Dev work/Colony Type Multi-Chain
-                  DAO (target date for launch: Q4 2022)
-                </li>
-              </ul>
-            </div>
-          </div>
+          </Animated>
+
           <div className={styles.roadmap_big_logo}>
-            <div className={styles.roadmap_logo_wrapper}>
-              <div className={styles.roadmap_logo}>
-                <img src={big_logo} />
+            <Animated
+              animationIn='fadeInUp'
+              animationInDuration={1000}
+              animationInDelay={300}
+              isVisible={isVisible}>
+              <div className={styles.roadmap_logo_wrapper}>
+                <div className={styles.roadmap_logo}>
+                  <img src={big_logo} />
+                </div>
               </div>
-            </div>
-            <div className={styles.roadmap_title_big}>
-              <img src={big_title} />
-            </div>
+              <div className={styles.roadmap_title_big}>
+                <img src={big_title} />
+              </div>
+            </Animated>
           </div>
         </div>
-        <div className={styles.roadmap_second_row + " " + styles.rodmap_midle}>
-          <div className={styles.roadmap_column}>
+        <div
+          className={styles.roadmap_second_row + " " + styles.rodmap_midle}
+          ref={isVisibleRef_2}>
+          <Animated
+            animationIn='fadeInLeft'
+            animationInDuration={1000}
+            animationInDelay={1200}
+            isVisible={isVisible_2}
+            className={styles.roadmap_column}>
             <div className={styles.roadmap_column_top}>
               <div className={styles.roadmap_number}>
                 <img src={q2} />
@@ -100,8 +135,13 @@ export const Roadmap = () => {
                 <li>Prepare design for QUAI Invest wallet app for V2 </li>
               </ul>
             </div>
-          </div>
-          <div className={styles.roadmap_column}>
+          </Animated>
+          <Animated
+            animationIn='fadeInLeft'
+            animationInDuration={1000}
+            animationInDelay={800}
+            isVisible={isVisible_2}
+            className={styles.roadmap_column}>
             <div className={styles.roadmap_column_top}>
               <div className={styles.roadmap_title}>
                 <h5>May - June</h5>
@@ -137,8 +177,13 @@ export const Roadmap = () => {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className={styles.roadmap_column}>
+          </Animated>
+          <Animated
+            animationIn='fadeInLeft'
+            animationInDuration={1000}
+            animationInDelay={300}
+            isVisible={isVisible_2}
+            className={styles.roadmap_column}>
             <div className={styles.roadmap_column_top}>
               <div className={styles.roadmap_title}>
                 <h5>June - July</h5>
@@ -165,10 +210,15 @@ export const Roadmap = () => {
                 <li>QUAI on Fantom: cohort farm development</li>
               </ul>
             </div>
-          </div>
+          </Animated>
         </div>
-        <div className={styles.roadmap_second_row}>
-          <div className={styles.roadmap_column}>
+        <div className={styles.roadmap_second_row} ref={isVisibleRef_3}>
+          <Animated
+            animationIn='fadeInLeft'
+            animationInDuration={1000}
+            animationInDelay={1200}
+            isVisible={isVisible_3}
+            className={styles.roadmap_column}>
             <div className={styles.roadmap_column_top}>
               <div className={styles.roadmap_number}>
                 <img src={q3} />
@@ -196,8 +246,13 @@ export const Roadmap = () => {
                 <li>V2/VC style test pools launch - Fantom and BSC</li>
               </ul>
             </div>
-          </div>
-          <div className={styles.roadmap_column}>
+          </Animated>
+          <Animated
+            animationIn='fadeInLeft'
+            animationInDuration={1000}
+            animationInDelay={800}
+            isVisible={isVisible_3}
+            className={styles.roadmap_column}>
             <div className={styles.roadmap_column_top}>
               <div className={styles.roadmap_title}>
                 <h5>August - September</h5>
@@ -214,8 +269,13 @@ export const Roadmap = () => {
                 <li>Ongoing integration of partner services on QUAI Invest</li>
               </ul>
             </div>
-          </div>
-          <div className={styles.roadmap_column}>
+          </Animated>
+          <Animated
+            animationIn='fadeInLeft'
+            animationInDuration={1000}
+            animationInDelay={300}
+            isVisible={isVisible_3}
+            className={styles.roadmap_column}>
             <div className={styles.roadmap_column_top}>
               <div className={styles.roadmap_title}>
                 <h5>September - October</h5>
@@ -236,9 +296,9 @@ export const Roadmap = () => {
                 <li>Full platform launch of QUAI V2 on all chains*</li>
               </ul>
             </div>
-          </div>
+          </Animated>
         </div>
       </div>
-    </div>
+    </Parallax>
   );
 };

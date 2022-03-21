@@ -3,10 +3,16 @@ import { MainImg } from "./MainImg";
 import title from "../../assets/svgs/title.svg";
 import { MainImgMobile } from "./MainImgMobile";
 import { ButtonBlueWhite } from "../Buttons/Buttons";
+import { Parallax } from "react-parallax";
 
 export const FirstScreen = (props) => {
   return (
-    <div className={styles.main_screen}>
+    <Parallax
+      blur={0}
+      bgImage='img/main_screen_bg.png'
+      strength={400}
+      bgImageStyle={{ marginTop: "-200px" }}
+      contentClassName={styles.main_screen}>
       <div className='container'>
         <div className={styles.main_screen_info_left}>
           <div className={styles.main_screen_titles}>
@@ -53,6 +59,6 @@ export const FirstScreen = (props) => {
       <div className={styles.svg_wrapper_mobile}>
         <MainImgMobile />
       </div>
-    </div>
+    </Parallax>
   );
 };

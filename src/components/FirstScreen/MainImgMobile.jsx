@@ -4,8 +4,10 @@ import eye from "../../assets/img/eye.png";
 import comics from "../../assets/img/comics.png";
 import { useEffect, useRef } from "react";
 import styles from "./FirstScreen.module.css";
+import { createBrowserHistory } from "history";
 
 export const MainImgMobile = () => {
+  const history = createBrowserHistory();
   return (
     <svg
       width='480'
@@ -45,7 +47,15 @@ export const MainImgMobile = () => {
       <g filter='url(#filter1_d_1188_1666)'>
         <circle cx='48.3819' cy='51.3819' r='16.3819' fill='#5A70FF' />
       </g>
-      <circle cx='48.2514' cy='51.2514' r='9.02879' fill='white' />
+      <circle cx='48.2514' cy='51.2514' r='9.02879' fill='white'>
+        <animate
+          attributeName='r'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='5;9;5;'
+          dur='3s'
+        />
+      </circle>
       <line
         x1='91.6464'
         y1='428.646'
@@ -279,7 +289,10 @@ export const MainImgMobile = () => {
         width='100px'
         height='100px'
         href={rasko}
-        xlinkHref={rasko}></image>
+        xlinkHref={rasko}
+        onClick={() => {
+          history.push("https://asko.finance/");
+        }}></image>
       <image
         x='119'
         y='522'
@@ -287,7 +300,10 @@ export const MainImgMobile = () => {
         width='100px'
         height='100px'
         href={eye}
-        xlinkHref={eye}></image>
+        xlinkHref={eye}
+        onClick={() => {
+          history.push("https://mediaeyenft.com/");
+        }}></image>
       <image
         x='257'
         y='522'
@@ -295,7 +311,10 @@ export const MainImgMobile = () => {
         width='100px'
         height='100px'
         href={quai}
-        xlinkHref={quai}></image>
+        xlinkHref={quai}
+        onClick={() => {
+          history.push("https://quai-invest.net/");
+        }}></image>
       <image
         x='356'
         y='433'

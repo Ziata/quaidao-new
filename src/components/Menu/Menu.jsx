@@ -9,10 +9,12 @@ import discord from "../../assets/svgs/socLinks/discord.svg";
 import telegram from "../../assets/svgs/socLinks/telegram.svg";
 import github from "../../assets/svgs/socLinks/github.svg";
 import twitter from "../../assets/svgs/socLinks/twitter.svg";
+import { createBrowserHistory } from "history";
 
 export const Menu = () => {
   const [scrollPage, setScrollPage] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
+  const history = createBrowserHistory();
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -44,20 +46,27 @@ export const Menu = () => {
             <NavLink to='/' exact>
               Governance
             </NavLink>
-            <NavLink to='/ee' exact>
+            <NavLink to='/tokenomics' exact>
               Tokenomics
             </NavLink>
             <NavLink to='/projects' exact>
               Projects
             </NavLink>
-            <NavLink to='/ee' exact>
-              Blog
-            </NavLink>
-            <NavLink to='/ee' exact>
+            <a href='https://quaidao.io/blog/'>Blog</a>
+            <a
+              href='https://t.me/QuaiDAOCommunity'
+              target='_blank'
+              rel='noreferrer'>
               Community
-            </NavLink>
+            </a>
           </nav>
-          <ButtonBlue text='Litepaper' styleSpan={{ width: "160px" }} />
+          <ButtonBlue
+            text='Litepaper'
+            styleSpan={{ width: "160px" }}
+            onClick={() => {
+              history.push("https://docs.quaidao.io/");
+            }}
+          />
         </div>
         <div className={styles.mobile_menu}>
           <Link to='/' exact>
@@ -80,45 +89,69 @@ export const Menu = () => {
               : styles.mobile_menu_content
           }>
           <div className={styles.mobile_menu_content_header}>
-            <ButtonBlueWhite text='Litepaper' />
+            <ButtonBlueWhite
+              text='Litepaper'
+              onClick={() => {
+                history.push("https://docs.quaidao.io/");
+              }}
+            />
           </div>
           <div className='container'>
             <nav>
               <NavLink to='/' exact>
                 Governance
               </NavLink>
-              <NavLink to='/ee' exact>
+              <NavLink to='/tokenomics' exact>
                 Tokenomics
               </NavLink>
               <NavLink to='/projects' exact>
                 Projects
               </NavLink>
-              <NavLink to='/ee' exact>
-                Blog
-              </NavLink>
-              <NavLink to='/ee' exact>
+              <a href='https://quaidao.io/blog/'>Blog</a>
+              <a
+                href='https://t.me/QuaiDAOCommunity'
+                target='_blank'
+                rel='noreferrer'>
                 Community
-              </NavLink>
+              </a>
             </nav>
             <div className={styles.soc_links}>
-              <Link to='/'>
+              <a
+                href='https://quaidao.medium.com/'
+                target='_blank'
+                rel='noreferrer'>
                 <img src={medium} />
-              </Link>
-              <Link to='/'>
+              </a>
+              <a
+                href='https://www.linkedin.com/company/quai-dao-defi-fueled-accelerator'
+                target='_blank'
+                rel='noreferrer'>
                 <img src={linkedin} />
-              </Link>
-              <Link to='/'>
+              </a>
+              <a
+                href='https://discord.gg/WHUkdJjxxP'
+                target='_blank'
+                rel='noreferrer'>
                 <img src={discord} />
-              </Link>
-              <Link to='/'>
+              </a>
+              <a
+                href='https://t.me/QuaiDAOCommunity'
+                target='_blank'
+                rel='noreferrer'>
                 <img src={telegram} />
-              </Link>
-              <Link to='/'>
+              </a>
+              <a
+                href='https://github.com/QUAI-DAO/QUAI-Smart-Contracts'
+                target='_blank'
+                rel='noreferrer'>
                 <img src={github} />
-              </Link>
-              <Link to='/'>
+              </a>
+              <a
+                href='https://twitter.com/QuaiGlobal'
+                target='_blank'
+                rel='noreferrer'>
                 <img src={twitter} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

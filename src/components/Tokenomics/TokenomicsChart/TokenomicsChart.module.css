@@ -1,0 +1,237 @@
+.tokenomics_chart {
+  padding: 50px 0;
+  background: url("../../../assets/img/tokenomics_chart_bg.png") no-repeat
+    center;
+  background-size: cover;
+}
+
+.tokenomics_chart h2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: #005bbc;
+  text-align: center;
+}
+
+.tokenomics_chart h4 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  text-align: center;
+}
+
+.tokenomics_chart h4 span {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: #0024e5;
+}
+
+.tokenomics_chart_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.tokenomics_right,
+.tokenomics_left {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.tokenomics_block {
+  margin: 10px 0;
+  position: relative;
+}
+
+.tokenomics_block h6 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin: 5px 0;
+}
+
+.tokenomics_block span {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 5px 0;
+  color: #005bbc;
+}
+
+.tokenomics_left {
+  text-align: right;
+}
+
+.tokenomics_center {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tokenomics_center svg {
+  width: 100%;
+}
+
+.tokenomics_left .tokenomics_block {
+  padding-right: 60px;
+}
+
+.tokenomics_left .tokenomics_block::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Group 126699 */
+  background: #f4f7fd;
+  box-shadow: -4px 8px 11px rgba(133, 131, 131, 0.43), inset 0px 5px 5px #ffffff;
+  border-radius: 6px;
+  width: 40px;
+  height: 38px;
+  right: 0;
+}
+
+.tokenomics_left .tokenomics_block::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 26px;
+  background: #e2e6ff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  right: 6px;
+}
+
+.tokenomics_left .tokenomics_block:nth-child(2)::after {
+  background: #5570ff;
+}
+
+.tokenomics_left .tokenomics_block:nth-child(3)::after {
+  background: #a5b3ff;
+}
+
+.tokenomics_left .tokenomics_block:nth-child(4)::after {
+  background: #c8d1ff;
+}
+
+.tokenomics_right .tokenomics_block {
+  padding-left: 60px;
+}
+
+.tokenomics_right .tokenomics_block::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Group 126699 */
+  background: #f4f7fd;
+  box-shadow: -4px 8px 11px rgba(133, 131, 131, 0.43), inset 0px 5px 5px #ffffff;
+  border-radius: 6px;
+  width: 40px;
+  height: 38px;
+  left: 0;
+}
+
+.tokenomics_right .tokenomics_block::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 26px;
+  background: #0024e5;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  left: 6px;
+}
+
+.tokenomics_right .tokenomics_block:nth-child(2)::after {
+  background: #657dff;
+}
+
+.tokenomics_right .tokenomics_block:nth-child(3)::after {
+  background: #8b9dff;
+}
+
+.tokenomics_right .tokenomics_block:nth-child(4)::after {
+  background: #3050ff;
+}
+
+@media (max-width: 1279.98px) {
+  .tokenomics_center {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .tokenomics_chart_main {
+    flex-direction: column;
+  }
+  .tokenomics_center {
+    margin-top: 30px;
+    width: 100%;
+    order: 1;
+    padding: 0;
+  }
+  .tokenomics_left {
+    width: 100%;
+    order: 2;
+    text-align: left;
+  }
+  .tokenomics_right {
+    width: 100%;
+    order: 3;
+  }
+  .tokenomics_left .tokenomics_block {
+    padding-right: 0;
+    padding-left: 60px;
+  }
+  .tokenomics_left .tokenomics_block::before {
+    right: initial;
+    left: 0;
+  }
+
+  .tokenomics_left .tokenomics_block::after {
+    left: 6px;
+    right: initial;
+  }
+  .tokenomics_chart {
+    background: url("../../../assets/img/tokenomics_chart_bg_mobile.png")
+      no-repeat center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .tokenomics_chart h2 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .tokenomics_chart h4 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .tokenomics_chart h4 span {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .tokenomics_chart_main {
+    margin: 0;
+  }
+}

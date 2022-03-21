@@ -102,16 +102,58 @@ export const DefiImg = () => {
         rx='54.8988'
         ry='54.5'
         fill='#0075FF'
-        fill-opacity='0.15'
-      />
+        fill-opacity='0.15'>
+        <animate
+          attributeName='rx'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='50.5;55.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='ry'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='50.5;55.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='fill-opacity'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='0;0.15;0;'
+          dur='3s'
+        />
+      </ellipse>
       <ellipse
         cx='1296.95'
         cy='54.5'
         rx='48.8549'
         ry='48.5'
         fill='#0075FF'
-        fill-opacity='0.31'
-      />
+        fill-opacity='0.31'>
+        <animate
+          attributeName='ry'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='44.5;48.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='rx'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='44.5;48.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='fill-opacity'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='0.1;0.31;0.1;'
+          dur='3s'
+        />
+      </ellipse>
       <ellipse
         cx='1296.8'
         cy='54.5'
@@ -120,20 +162,49 @@ export const DefiImg = () => {
         fill='#0075FF'
         fill-opacity='0.74'
       />
+
       <circle
         cx='1404.5'
         cy='161.5'
         r='54.5'
         fill='#0075FF'
-        fill-opacity='0.15'
-      />
+        fill-opacity='0.15'>
+        <animate
+          attributeName='r'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='50.5;55.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='fill-opacity'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='0;0.15;0;'
+          dur='3s'
+        />
+      </circle>
       <circle
         cx='1404.5'
         cy='161.5'
         r='48.5'
         fill='#0075FF'
-        fill-opacity='0.31'
-      />
+        fill-opacity='0.31'>
+        <animate
+          attributeName='r'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='44.5;48.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='fill-opacity'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='0.1;0.31;0.1;'
+          dur='3s'
+        />
+      </circle>
       <circle
         cx='1404.5'
         cy='161.5'
@@ -146,15 +217,43 @@ export const DefiImg = () => {
         cy='308.5'
         r='54.5'
         fill='#0075FF'
-        fill-opacity='0.15'
-      />
+        fill-opacity='0.15'>
+        <animate
+          attributeName='r'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='50.5;55.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='fill-opacity'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='0;0.15;0;'
+          dur='3s'
+        />
+      </circle>
       <circle
         cx='1404.5'
         cy='308.5'
         r='48.5'
         fill='#0075FF'
-        fill-opacity='0.31'
-      />
+        fill-opacity='0.31'>
+        <animate
+          attributeName='r'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='44.5;48.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='fill-opacity'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='0.1;0.31;0.1;'
+          dur='3s'
+        />
+      </circle>
       <circle
         cx='1404.5'
         cy='308.5'
@@ -167,15 +266,43 @@ export const DefiImg = () => {
         cy='419.5'
         r='54.5'
         fill='#0075FF'
-        fill-opacity='0.15'
-      />
+        fill-opacity='0.15'>
+        <animate
+          attributeName='r'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='50.5;55.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='fill-opacity'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='0;0.15;0;'
+          dur='3s'
+        />
+      </circle>
       <circle
         cx='1288.5'
         cy='419.5'
         r='48.5'
         fill='#0075FF'
-        fill-opacity='0.31'
-      />
+        fill-opacity='0.31'>
+        <animate
+          attributeName='r'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='44.5;48.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='fill-opacity'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='0.1;0.31;0.1;'
+          dur='3s'
+        />
+      </circle>
       <circle
         cx='1288.5'
         cy='419.5'
@@ -183,20 +310,38 @@ export const DefiImg = () => {
         fill='#0075FF'
         fill-opacity='0.74'
       />
-      <circle
-        cx='99.5'
-        cy='235.5'
-        r='99.5'
-        fill='#0075FF'
-        fill-opacity='0.15'
-      />
-      <circle
-        cx='99.5'
-        cy='235.5'
-        r='87.5'
-        fill='#0075FF'
-        fill-opacity='0.31'
-      />
+      <circle cx='99.5' cy='235.5' r='99.5' fill='#0075FF' fill-opacity='0.15'>
+        <animate
+          attributeName='r'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='89.5;99.9;'
+          dur='3s'
+        />
+        <animate
+          attributeName='fill-opacity'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='0.05;0.15;0.00;'
+          dur='3s'
+        />
+      </circle>
+      <circle cx='99.5' cy='235.5' r='87.5' fill='#0075FF' fill-opacity='0.31'>
+        <animate
+          attributeName='r'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='82.5;87.5;'
+          dur='3s'
+        />
+        <animate
+          attributeName='fill-opacity'
+          repeatCount='indefinite'
+          begin='1ms'
+          values='0.10;0.31;0.10;'
+          dur='3s'
+        />
+      </circle>
       <circle
         cx='99.5'
         cy='235.5'

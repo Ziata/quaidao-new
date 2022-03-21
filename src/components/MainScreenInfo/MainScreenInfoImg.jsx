@@ -2,10 +2,20 @@ import hands from "../../assets/img/info/hands.png";
 import light from "../../assets/img/info/light.png";
 import rocket from "../../assets/img/info/rocket.png";
 import chart from "../../assets/img/info/chart.png";
+import styles from "./MainScreenInfo.module.css";
+import { useRef } from "react";
+import { useIsVisible } from "react-is-visible";
 
 export const MainScreenInfoImg = () => {
+  const isVisibleRef = useRef();
+  const isVisible = useIsVisible(isVisibleRef);
   return (
-    <svg width='1048' height='1111' viewBox='0 0 1048 1111' fill='none'>
+    <svg
+      width='1048'
+      height='1111'
+      viewBox='0 0 1048 1111'
+      fill='none'
+      ref={isVisibleRef}>
       <g filter='url(#filter0_f_517_1164)'>
         <ellipse
           cx='541.756'
@@ -592,6 +602,7 @@ export const MainScreenInfoImg = () => {
       <path
         d='M607.965 614.747L555.452 614.767C520.873 614.78 492.963 586.763 492.976 552.291C492.983 535.001 499.969 519.427 511.356 508.04C522.636 496.76 538.21 489.774 555.5 489.767C572.79 489.76 588.466 496.734 599.63 508.006C605.319 513.695 609.827 520.459 613.045 527.975C616.264 535.384 617.979 543.652 617.976 552.35C617.971 566.096 613.563 578.769 605.934 589.082C604.322 591.445 602.389 593.593 600.348 595.635L582.313 577.385C588.544 570.832 592.306 562.025 592.31 552.253C592.314 542.051 588.237 532.924 581.581 526.269C574.926 519.613 565.585 515.536 555.49 515.54C545.396 515.544 536.159 519.628 529.498 526.289C522.837 532.95 518.753 542.079 518.749 552.281C518.741 572.577 535.165 589.002 555.462 588.994L555.472 562.361L607.965 614.747Z'
         fill='url(#paint0_linear_517_1164)'
+        className={isVisible ? styles.logo : null}
       />
       <mask
         id='mask0_517_1164'

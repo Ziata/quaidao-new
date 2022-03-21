@@ -20,38 +20,57 @@ export default function () {
             <NavLink to='/' exact>
               Governance
             </NavLink>
-            <NavLink to='/ee' exact>
+            <NavLink to='/tokenomics' exact>
               Tokenomics
             </NavLink>
-            <NavLink to='/ee' exact>
+            <NavLink to='/projects' exact>
               Projects
             </NavLink>
-            <NavLink to='/ee' exact>
-              Blog
-            </NavLink>
-            <NavLink to='/ee' exact>
+            <a href='https://quaidao.io/blog/'>Blog</a>
+            <a
+              href='https://t.me/QuaiDAOCommunity'
+              target='_blank'
+              rel='noreferrer'>
               Community
-            </NavLink>
+            </a>
           </nav>
           <div className={styles.soc_links}>
-            <Link to='/'>
+            <a
+              href='https://quaidao.medium.com/'
+              target='_blank'
+              rel='noreferrer'>
               <img src={medium} />
-            </Link>
-            <Link to='/'>
+            </a>
+            <a
+              href='https://www.linkedin.com/company/quai-dao-defi-fueled-accelerator'
+              target='_blank'
+              rel='noreferrer'>
               <img src={linkedin} />
-            </Link>
-            <Link to='/'>
+            </a>
+            <a
+              href='https://discord.gg/WHUkdJjxxP'
+              target='_blank'
+              rel='noreferrer'>
               <img src={discord} />
-            </Link>
-            <Link to='/'>
+            </a>
+            <a
+              href='https://t.me/QuaiDAOCommunity'
+              target='_blank'
+              rel='noreferrer'>
               <img src={telegram} />
-            </Link>
-            <Link to='/'>
+            </a>
+            <a
+              href='https://github.com/QUAI-DAO/QUAI-Smart-Contracts'
+              target='_blank'
+              rel='noreferrer'>
               <img src={github} />
-            </Link>
-            <Link to='/'>
+            </a>
+            <a
+              href='https://twitter.com/QuaiGlobal'
+              target='_blank'
+              rel='noreferrer'>
               <img src={twitter} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
