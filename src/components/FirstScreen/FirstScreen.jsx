@@ -37,17 +37,17 @@ export const FirstScreen = (props) => {
             </div>
             <div>
               <h5>
-                Staking Rate APR
+                Cohort Rewards Farms
                 <br />
                 up to
-                <span>180%</span>
+                <span>180.0%</span>
               </h5>
             </div>
             <div>
               <h5>
                 Total QUAI in Cohort Farm
                 <br />
-                <span>8,453,190</span>
+                <span>4949466.876</span>
               </h5>
             </div>
           </div>

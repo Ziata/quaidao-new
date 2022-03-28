@@ -7,8 +7,10 @@ import discord from "../../assets/svgs/socLinks/discord.svg";
 import telegram from "../../assets/svgs/socLinks/telegram.svg";
 import github from "../../assets/svgs/socLinks/github.svg";
 import twitter from "../../assets/svgs/socLinks/twitter.svg";
+import { createBrowserHistory } from "history";
 
 export default function () {
+  const history = createBrowserHistory();
   return (
     <footer>
       <div className='container'>
@@ -17,22 +19,26 @@ export default function () {
             <Link to='/' exact>
               <img src={logo} />
             </Link>
-            <NavLink to='/' exact>
-              Governance
-            </NavLink>
-            <NavLink to='/tokenomics' exact>
-              Tokenomics
-            </NavLink>
-            <NavLink to='/projects' exact>
-              Projects
-            </NavLink>
-            <a href='https://quaidao.io/blog/'>Blog</a>
+            <a>Become Partner</a>
+            <a
+              onClick={() => {
+                history.push("https://docs.quaidao.io/");
+              }}>
+              Litepaper
+            </a>
             <a
               href='https://t.me/QuaiDAOCommunity'
               target='_blank'
               rel='noreferrer'>
-              Community
+              Join QUAI Community
             </a>
+            <a
+              href='https://t.me/QuaiDAOCommunity'
+              target='_blank'
+              rel='noreferrer'>
+              Contact Us
+            </a>
+            <a href='https://quaidao.io/blog/'>Blog</a>
           </nav>
           <div className={styles.soc_links}>
             <a

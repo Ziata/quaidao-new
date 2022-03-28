@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation, Routes, Route } from "react-router-dom";
 import "./assets/fonts/OpenSans/stylesheet.css";
 import "./assets/fonts/Rubik/stylesheet.css";
 import "./assets/fonts/Roboto/stylesheet.css";
@@ -10,19 +10,22 @@ import { Menu } from "./components/Menu/Menu";
 import Projects from "./pages/Projects";
 import Tokenomics from "./pages/Tokenomics";
 import ScrollToTop from "./functions/ScrollToTop";
+import Governance from "./pages/Governance";
 
 function App() {
+  const location = useLocation();
   return (
-    <BrowserRouter>
-      <Menu />
+    <>
+      {location.pathname !== "/governance" && <Menu />}
       <ScrollToTop />
       <Routes>
         <Route path='/' exact element={<Main />} />
         <Route path='/projects' exact element={<Projects />} />
         <Route path='/tokenomics' exact element={<Tokenomics />} />
+        <Route path='/governance' exact element={<Governance />} />
       </Routes>
-      <Footer />
-    </BrowserRouter>
+      {location.pathname !== "/governance" && <Footer />}
+    </>
   );
 }
 

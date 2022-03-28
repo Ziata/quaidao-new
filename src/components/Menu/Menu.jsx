@@ -9,11 +9,14 @@ import discord from "../../assets/svgs/socLinks/discord.svg";
 import telegram from "../../assets/svgs/socLinks/telegram.svg";
 import github from "../../assets/svgs/socLinks/github.svg";
 import twitter from "../../assets/svgs/socLinks/twitter.svg";
+import dropdown_arrow from "../../assets/svgs/dropdown_arrow.svg";
+import dropdown_arrow_blue from "../../assets/svgs/dropdown_arrow_blue.svg";
 import { createBrowserHistory } from "history";
 
 export const Menu = () => {
   const [scrollPage, setScrollPage] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
   const history = createBrowserHistory();
 
   useEffect(() => {
@@ -44,21 +47,45 @@ export const Menu = () => {
               <img src={logo} />
             </Link>
             <NavLink to='/' exact>
-              Governance
-            </NavLink>
-            <NavLink to='/tokenomics' exact>
-              Tokenomics
+              Home
             </NavLink>
             <NavLink to='/projects' exact>
               Projects
             </NavLink>
-            <a href='https://quaidao.io/blog/'>Blog</a>
+            <NavLink to='/tokenomics' exact>
+              Tokenomics
+            </NavLink>
+            <div
+              className={styles.dropdown_wrapper}
+              onMouseLeave={() => {
+                setShowDropdown(false);
+              }}>
+              <a
+                onMouseEnter={() => {
+                  setShowDropdown(true);
+                }}
+                className={showDropdown && styles.active}>
+                Dao <img src={dropdown_arrow} />
+              </a>
+              {showDropdown && (
+                <div className={styles.dropdown}>
+                  <NavLink
+                    to='governance'
+                    target='_blank'
+                    rel='noopener noreferrer'>
+                    Governance Principles
+                  </NavLink>
+                  <a>DAO Governance Structure</a>
+                </div>
+              )}
+            </div>
             <a
               href='https://t.me/QuaiDAOCommunity'
               target='_blank'
               rel='noreferrer'>
               Community
             </a>
+            <a href='https://quaidao.io/blog/'>Blog</a>
           </nav>
           <ButtonBlue
             text='Litepaper'
@@ -99,21 +126,45 @@ export const Menu = () => {
           <div className='container'>
             <nav>
               <NavLink to='/' exact>
-                Governance
-              </NavLink>
-              <NavLink to='/tokenomics' exact>
-                Tokenomics
+                Home
               </NavLink>
               <NavLink to='/projects' exact>
                 Projects
               </NavLink>
-              <a href='https://quaidao.io/blog/'>Blog</a>
+              <NavLink to='/tokenomics' exact>
+                Tokenomics
+              </NavLink>
+              <div
+                className={styles.dropdown_wrapper}
+                onMouseLeave={() => {
+                  setShowDropdown(false);
+                }}>
+                <a
+                  onMouseEnter={() => {
+                    setShowDropdown(true);
+                  }}
+                  className={showDropdown && styles.active}>
+                  Dao <img src={dropdown_arrow_blue} />
+                </a>
+                {showDropdown && (
+                  <div className={styles.dropdown}>
+                    <NavLink
+                      to='governance'
+                      target='_blank'
+                      rel='noopener noreferrer'>
+                      Governance Principles
+                    </NavLink>
+                    <a>DAO Governance Structure</a>
+                  </div>
+                )}
+              </div>
               <a
                 href='https://t.me/QuaiDAOCommunity'
                 target='_blank'
                 rel='noreferrer'>
                 Community
               </a>
+              <a href='https://quaidao.io/blog/'>Blog</a>
             </nav>
             <div className={styles.soc_links}>
               <a

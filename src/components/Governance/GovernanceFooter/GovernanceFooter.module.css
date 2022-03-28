@@ -1,0 +1,30 @@
+.governance_footer {
+  height: 90px;
+  width: 100%;
+  background: url("../../../assets/img/governance_header.png") no-repeat center;
+  background-size: cover;
+}
+
+.governance_footer :global(.container) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.governance_footer span {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+  .governance_footer span {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

@@ -40,7 +40,7 @@ export const TokenomicsBlock = () => {
             <div className={styles.tokenomics_block}>
               <img src={img_2} />
               <h5>
-                Staking Rate APR <br />
+                Cohort Rewards Farms <br />
                 up to<span> 180%</span>
               </h5>
             </div>
@@ -70,7 +70,7 @@ export const TokenomicsBlock = () => {
               <h5>
                 Circulating supply
                 <br />
-                <span>50,613,200</span>
+                <span>39,809,807</span>
               </h5>
             </div>
           </Animated>

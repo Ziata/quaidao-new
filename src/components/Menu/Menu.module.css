@@ -83,7 +83,62 @@
     0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 0 50px 0 0;
   position: relative;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
 }
+
+.dropdown_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown_wrapper a img {
+  margin-top: 4px;
+  transform: rotate(0);
+  transition: 0.3s;
+}
+
+.dropdown_wrapper a.active img {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+.menu nav a img {
+  margin-left: 6px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 35px;
+  padding: 10px;
+  background: #f4f7fd;
+  mix-blend-mode: normal;
+  box-shadow: -4px 8px 11px rgba(0, 0, 0, 0.43), inset 0px 5px 5px #ffffff;
+  border-radius: 6px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu .dropdown a {
+  white-space: nowrap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #0d0d0d;
+  text-shadow: none;
+  margin: 5px;
+}
+
 .menu nav a:not(:first-child)::before {
   content: "";
   left: 15%;
@@ -95,7 +150,7 @@
 .menu nav a:not(:first-child):hover::before {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: 0px;
   height: 4px;
   left: 15%;
   width: 70%;
@@ -147,6 +202,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.mobile_menu_content nav .dropdown_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% + 30px);
+  justify-content: center;
+}
+
+.mobile_menu_content nav .dropdown_wrapper a {
+  display: flex;
+  align-items: center;
+}
+
+.mobile_menu_content nav .dropdown_wrapper a img {
+  margin-left: 5px;
+}
+
+.mobile_menu_content nav .dropdown {
+  position: relative;
+  width: 100%;
+  background: #e2e7f1;
+  box-shadow: none;
+  top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile_menu_content nav .dropdown a {
+  margin: 7px 0;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #000000;
 }
 
 .mobile_menu_content nav a {
